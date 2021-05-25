@@ -5,6 +5,9 @@ altodeseado="1080"
 #Setea el path con las imagenes en una variable
 fuente=/home/$USER/Pictures/Wallpapers
 cd $fuente
+#Limpia los filenames
+#for archivo in $(ls *.jpg); do
+#    mv $archivo $(echo $archivo | sed -E '\W*(?!\.)\W/')
 #Declara y carga archivos del  directorio al array.
 declare -a array
 for file in *.jpg
@@ -27,4 +30,4 @@ wallpaper="${imagenes[$RANDOM % ${#imagenes[@]}]}"
     else 
         echo "No tenemos fondo de pantalla :("
     fi
-    
+done
