@@ -5,7 +5,7 @@ altodeseado="1080"
 #Setea el path con las imagenes en una variable
 fuente=/home/$USER/Pictures/Wallpapers
 cd $fuente
-#Declara y carga archivos del directorio al array
+#Declara y carga archivos del  directorio al array.
 declare -a array
 for file in *.jpg
 do
@@ -27,3 +27,4 @@ wallpaper="${imagenes[$RANDOM % ${#imagenes[@]}]}"
     else 
         echo "No tenemos fondo de pantalla :("
     fi
+    
